@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mind Map with Anchored Connections</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Top Menu Bar -->
+  <div id="menuBar">
+    <button id="addBox" class="menu-btn">Add Box</button>
+    <label for="defaultBoxColor">Box Color:</label>
+    <input type="color" id="defaultBoxColor" value="#333333">
+    <button id="brushToggle" class="menu-btn">Brush Off</button>
+    <label for="brushColor">Brush Color:</label>
+    <input type="color" id="brushColor" value="#ff0000">
+    <button id="newProfile" class="menu-btn">New Profile</button>
+    <button id="saveProfile" class="menu-btn">Save Profile</button>
+    <button id="loadProfile" class="menu-btn">Load Profile</button>
+    <!-- Hidden file input for profile loading -->
+    <input type="file" id="profileFile" accept=".json" style="display:none;">
+  </div>
+
+  <!-- Wrapper for Pan/Zoom -->
+  <div id="canvasWrapper">
+    <!-- The Canvas (all boxes and the SVG for connections are inside) -->
+    <div id="canvas">
+      <svg id="connection-lines"></svg>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
