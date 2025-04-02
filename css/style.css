@@ -4,7 +4,7 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #121212;
+  background-color: #321919;
   font-family: sans-serif;
   overflow: hidden;
 }
@@ -42,30 +42,32 @@ body, html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #121212;
+  background-color: #ce5454;
   cursor: grab;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* The Canvas is our single container for boxes and the SVG */
 #canvas {
   position: absolute;
   transform-origin: 0 0;
-  width: 4000px;
-  height: 4000px;
-  left: 0;
-  top: 0;
+  /* The starting size is arbitrary because updateCanvasSize() will adjust it */
+  min-width: 100px;
+  min-height: 100px;
+  background-color: #608c27;
 }
 
 /* SVG overlay for connection lines */
 #connection-lines {
   position: absolute;
+  transform-origin: 0 0;
   top: 0;
   left: 0;
-  width: 4000px;
-  height: 4000px;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
+  overflow: visible; /* Allow lines outside initial bounds */
 }
 
 /* Box styles */
@@ -77,6 +79,7 @@ body, html {
   overflow: hidden;
   box-sizing: border-box;
   z-index: 1;
+  contain: layout; 
 }
 .drag-handle {
   height: 20px;
