@@ -52,8 +52,8 @@ body, html {
   position: absolute;
   transform-origin: 0 0;
   /* The starting size is arbitrary because updateCanvasSize() will adjust it */
-  min-width: 100px;
-  min-height: 100px;
+  width: 4000px;
+  height: 4000px;
   background-color: #608c27;
 }
 
