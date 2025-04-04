@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (left + width > maxRight) maxRight = left + width;
       if (top + height > maxBottom) maxBottom = top + height;
     }
-    const offset = 100; // extra margin
+    const offset = 1000; // extra margin
     canvas.style.width = (maxRight + offset) + "px";
     canvas.style.height = (maxBottom + offset) + "px";
     svg.style.width = canvas.style.width;
